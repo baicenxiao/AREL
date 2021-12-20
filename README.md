@@ -3,6 +3,9 @@
 
 The repository contains Pytorch implementation of AREL based on MADDPG with Permutation Invariant Critic (PIC).
 
+### Summary
+This paper considers multi-agent reinforcement learning (MARL) tasks where agents receive a shared global reward at the end of an episode. The delayed nature of this reward affects the ability of the agents to assess the quality of their actions at intermediate time-steps. This paper focuses on developing methods to learn a temporal redistribution of the episodic reward to obtain a dense reward signal. Solving such MARL problems requires addressing two challenges: identifying (1) relative importance of states along the length of an episode (along time), and (2) relative importance of individual agents’ states at any single time-step (among agents). In this paper, we introduce Agent-Temporal Attention for Reward Redistribution in Episodic Multi-Agent Reinforcement Learning (AREL) to address these two challenges. AREL uses attention mechanisms to characterize the influence of actions on state transitions along trajectories (temporal attention), and how each agent is affected by other agents at each time-step (agent attention). The redistributed rewards predicted by AREL are dense, and can be integrated with any given MARL algorithm.
+
 #### Platform and Dependencies: 
 * Ubuntu 18.04 
 * Python 3.7
@@ -28,9 +31,33 @@ The following are sample commands using different credit assignment methods for 
 
 Results will be saved in `results` folder in the parent directory.
 
-### Acknowledgement
-The code of MADDPG with PIC is based on the publicly available implementation of https://github.com/IouJenLiu/PIC
-
 ### License
 This project is licensed under the MIT License
+
+### Acknowledgements
+The code of MADDPG with PIC is based on the publicly available implementation of https://github.com/IouJenLiu/PIC
+
+This work was supported by the U.S. Office of Naval Research via Grant N00014-17-S-B001. 
+
+The code of MADDPG is based on the publicly available implementation: https://github.com/openai/maddpg.
+
+### Additional Information
+
+Project Webpage: Feedback-driven Learn to Reason in Adversarial Environments for Autonomic Cyber Systems (http://labs.ece.uw.edu/nsl/faculty/ProjectWebPages/L2RAVE/)
+
+
+### Paper citation
+
+If you used this code for your experiments or found it helpful, please cite the following paper:
+
+Bibtex:
+<pre>
+@article{xiao2022arel,
+  title={Agent-Temporal Attention for Reward Redistribution in Episodic Multi-Agent Reinforcement Learning
+},
+  author={Xiao, Baicen and Ramasubramanian, Bhaskar and Poovendran, Radha},
+  booktitle={Proceedings of the 21th International Conference on Autonomous Agents and MultiAgent Systems},
+  year={2022}
+}
+</pre>
 
